@@ -12,8 +12,6 @@ const writeStream = new Writable({objectMode:true, write(chunk:IChunk, encoding:
     cb();
 }})
 
-
-
 const transformStream = new Transform({objectMode:true,transform(chunk:IChunk, encoding:string, cb:()=>void){
         
     this.push({value:chunk.value+2});

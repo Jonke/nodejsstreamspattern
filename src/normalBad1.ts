@@ -12,7 +12,6 @@ const writeStream = new Writable({objectMode:true, write(chunk:IChunk, encoding:
     cb();
 }})
 
-
 readStream.on("data", (data:IChunk) => {
     const newdata= {value:data.value+2};
     writeStream.write(newdata);

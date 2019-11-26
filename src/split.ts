@@ -17,12 +17,10 @@ const writeStreamRight = new Writable({objectMode:true, write(chunk:IChunk, enco
 }})
 
 const transformStreamLeft = new Transform({objectMode:true,transform(chunk:IChunk, encoding:string, cb:()=>void){
-        
     this.push({value:chunk.value+2});
     cb();
 }});
 const transformStreamRight = new Transform({objectMode:true,transform(chunk:IChunk, encoding:string, cb:()=>void){
-        
     this.push({value:chunk.value+2});
     cb();
 }});

@@ -18,8 +18,6 @@ const source2 = new Readable({objectMode:true, read(){
     // Generate some data
 }});
 
-
-
 // connect the source stream to the mainLine
 source1.pipe(mainLine, {end:false});
 source2.pipe(mainLine, {end:false});

@@ -39,10 +39,6 @@ return pt;
 
 }, new PassThrough({objectMode:true}));
 
-
-
-
-
 pipeline(joinend, transformStream, writeStream, err => {
     if (err) {
         // Error Handle
